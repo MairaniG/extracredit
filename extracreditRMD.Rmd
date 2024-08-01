@@ -1,0 +1,21 @@
+---
+title: "Extra credit prime code"
+author: "Mairani G"
+output: 
+  html_document:
+    number_sections: true
+    toc: true
+    toc_depth: 5
+date: "7/31/24" 
+---
+
+```{r}
+is_prime <- function(n) {if (n <= 1) return(FALSE)
+for (i in 2:sqrt(n)) {if (n %% i == 0) return(FALSE)}
+ return(TRUE)}
+
+prime_numbers <- which(sapply(1:1000, is_prime))
+print(prime_numbers)
+```
+
+This code works to find all the prime numbers between 1 and 1000. It does this through iteration and checking the value of each number and verifying if it is less than or equal to 1, based on this, it determines if it is a prime. ( the numbers are then displayed by print(prime_numbers) )  
